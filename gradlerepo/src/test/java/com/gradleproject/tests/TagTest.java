@@ -1,4 +1,4 @@
-package sdet.reporting;
+package com.gradleproject.tests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Epic("Framework Hardening")
 @Feature("Reporting Insights")
 @Owner("Aravind")
-public class W6D4ReportinginsightsTest {
+public class TagTest {
 
     @Test
     @Story("Categories")
