@@ -37,7 +37,7 @@ jobs:
       
       - name: 5. Run Tests
         working-directory: gradlerepo
-        run: gradle test --tests "com.gradleproject.data.OrderTestIT"
+        run: gradle test --no-configuration-cache --tests "com.gradleproject.data.OrderTestIT"
 
 
 
