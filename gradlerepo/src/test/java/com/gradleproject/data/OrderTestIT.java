@@ -17,7 +17,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-
+@Epic("Tag and History")
+@Feature("Checking The Tags")
+@Owner("Aravind")
 @Testcontainers(disabledWithoutDocker = true)
  class OrderTestIT {
      @Container
@@ -125,6 +127,16 @@ import java.sql.Statement;
          assertEquals(1,repository.count());
          assertEquals(1,repository.countByStatus("REFUNDED"));
     }
-      
+
+
+    @Test
+    @Story("Executive overview")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("ThE REst")
+    void shouldBeClassifiedAsTestDefect() {
+        throw new NullPointerException("Test code bug");
+    }
+
+
 }
  
