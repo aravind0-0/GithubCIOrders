@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"ThE REst","1056","shouldTimeout()","","2026-07-10","failed","2026-07-10","","com.gradleproject.data.OrderTestIT","com.gradleproject.data.OrderTestIT","shouldTimeout"
+"","57","flywaySeedingReferenceDataButNoPerTestOrders()","","2026-07-10","passed","2026-07-10","","com.gradleproject.data.OrderTestIT","com.gradleproject.data.OrderTestIT","flywaySeedingReferenceDataButNoPerTestOrders"
+"","72","countsOnlyPersistedTestOrders()","","2026-07-10","failed","2026-07-10","","com.gradleproject.data.OrderTestIT","com.gradleproject.data.OrderTestIT","countsOnlyPersistedTestOrders"
+"ThE REst","36","shouldBeClassifiedAsTestDefect()","","2026-07-10","broken","2026-07-10","","com.gradleproject.data.OrderTestIT","com.gradleproject.data.OrderTestIT","shouldBeClassifiedAsTestDefect"
+"","110","persistedBuilderDataAgainstIsolatedMysql()","","2026-07-10","passed","2026-07-10","","com.gradleproject.data.OrderTestIT","com.gradleproject.data.OrderTestIT","persistedBuilderDataAgainstIsolatedMysql"
+"","113","resetMakesTestOrderIndependent()","","2026-07-10","passed","2026-07-10","","com.gradleproject.data.OrderTestIT","com.gradleproject.data.OrderTestIT","resetMakesTestOrderIndependent"
