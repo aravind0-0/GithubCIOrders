@@ -15,7 +15,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '22'
-          cache: 'maven'
+          cache: 'gradle'
 
 
       - name: 3. Set up Gradle
@@ -38,3 +38,24 @@ jobs:
       - name: 5. Run Tests
         working-directory: gradlerepo
         run: gradle test --tests "com.gradleproject.data.OrderTestIT"
+
+
+
+      - name: 7. Generate Allure Report
+        if: always()
+        working-directory: gradlerepo
+        run: gradle allureReport
+
+      - name: 8. Upload Allure Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: gradlerepo/build/allure-results
+
+      - name: 9. Upload Allure Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: gradlerepo/build/reports/allure-report/allureReport

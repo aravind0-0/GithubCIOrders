@@ -1,0 +1,6 @@
+[
+  {
+    "name": "Flaky tests",
+    "matchedStatuses": ["failed","broken"]
+  }
+]

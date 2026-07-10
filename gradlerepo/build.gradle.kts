@@ -44,6 +44,10 @@ dependencies {
     testImplementation("org.flywaydb:flyway-mysql:$flywayVersion")
     testImplementation("mysql:mysql-connector-java:$mysqlLibVersion")
 
+    testImplementation("io.qameta.allure:allure-cucumber7-jvm")
+
+    testImplementation("io.qameta.allure:allure-junit5")
+
 
 }
 
