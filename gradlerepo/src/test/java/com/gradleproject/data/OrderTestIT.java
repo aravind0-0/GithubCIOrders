@@ -10,13 +10,13 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.mysql.MySQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.Duration;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 @Epic("Tag and History")
 @Feature("Checking The Tags")
@@ -136,6 +136,17 @@ import java.sql.Statement;
     @Description("ThE REst")
     void shouldBeClassifiedAsTestDefect() {
         throw new NullPointerException("Test code bug");
+    }
+
+
+    @Test
+    @Story("Checking Flaky Condition")
+    @Severity(SeverityLevel.MINOR)
+    @Description("ThE REst")
+    void shouldTimeout() {
+        assertTimeoutPreemptively(Duration.ofSeconds(1), () -> {
+            Thread.sleep(5000);
+        });
     }
 
 
