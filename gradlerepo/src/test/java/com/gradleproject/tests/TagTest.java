@@ -39,7 +39,7 @@ public class TagTest {
                 categories.indexOf("\"Test defects (broken)\"");
 
         int productDefectIndex =
-                categories.indexOf("\"Product defects\"");
+                categories.indexOf("\"Product defects \"");
 
         assertTrue(flakyIndex >= 0,
                 "Flaky category must exist");
