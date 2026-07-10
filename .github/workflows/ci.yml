@@ -43,27 +43,16 @@ jobs:
 
       - name: 7. Generate Allure Report
         if: always()
-        working-directory: gradlerepo
-        run: gradle allureReport
-
-      - name: 8. Upload Allure Results
-        if: always()
-        uses: actions/upload-artifact@v4
+        uses: simple-elf/allure-report-action@master
         with:
-          name: allure-results
-          path: gradlerepo/build/allure-results
-
-      - name: 9. Upload Allure Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: gradlerepo/build/reports/allure-report/allureReport
+          allure_results: gradlerepo/build/allure-results
+          allure_report: allure-report
 
 
-      - name: 10. Deploy Allure Report to GitHub Pages
+      - name: 8. Deploy Allure Report to GitHub Pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: gradlerepo/build/reports/allure-report/allureReport
+          publish_dir: allure-report
+
