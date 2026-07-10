@@ -5,8 +5,7 @@
       "failed",
       "broken"
     ],
-    "messageRegex": ".*(timeout|stale element|connection reset).*",
-    "flaky": true
+    "messageRegex": ".*(timeout|stale element|connection reset).*"
   },
   {
     "name": "Test defects (broken)",
