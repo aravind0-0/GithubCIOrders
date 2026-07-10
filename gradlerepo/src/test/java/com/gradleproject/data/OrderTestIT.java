@@ -114,7 +114,7 @@ import java.sql.Statement;
          factory.persisted(OrderBuilder.anOrder());
          factory.persisted(OrderBuilder.anOrder().sku("SKU-2").qty(2));
          
-         assertEquals(3,repository.count());
+         assertEquals(2,repository.count());
     }
     
     @Test

@@ -53,14 +53,6 @@ jobs:
           path: gh-pages
 
 
-      - name: 7. Generate Allure Report
-        if: always()
-        uses: simple-elf/allure-report-action@master
-        with:
-          allure_results: gradlerepo/build/allure-results
-          allure_report: allure-report
-
-
 
       - name: 8. Generate Allure Report with History
         if: always()
@@ -82,7 +74,7 @@ jobs:
 
 
       - name: 10. Deploy Allure Report to GitHub Pages
-        if: github.ref == 'refs/heads/master'
+        if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
